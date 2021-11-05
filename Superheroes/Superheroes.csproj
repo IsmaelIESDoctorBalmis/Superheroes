@@ -59,7 +59,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BackgroundConverter.cs" />
-    <Compile Include="superheroe.cs" />
+    <Compile Include="Superheroe.cs" />
+    <Compile Include="VisibilidadConverter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

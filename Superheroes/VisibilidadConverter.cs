@@ -4,26 +4,25 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
-using System.Windows.Media;
 
 namespace Superheroes
 {
-    class BackgroundConverter : IValueConverter
+    class VisibilidadConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            bool fondoPantalla = (bool)value;
+            bool habilitado = (bool)value;
 
-            if (fondoPantalla)
+            if (habilitado)
             {
-                return Brushes.Green;
+                return Visibility.Visible;
             }
             else
             {
-                return Brushes.Red;
+                return Visibility.Collapsed;
             }
-
 
         }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Superheroes
 {
-    class superheroe : INotifyPropertyChanged
+    class Superheroe : INotifyPropertyChanged
     {
         private string nombre;
         private string imagen;
@@ -36,11 +36,11 @@ namespace Superheroes
         public bool Xmen { get; set; }
         public bool Heroe { get; set; }
 
-        public superheroe()
+        public Superheroe()
         {
         }
 
-        public superheroe(string nombre, string imagen, bool vengador, bool xmen, bool heroe)
+        public Superheroe(string nombre, string imagen, bool vengador, bool xmen, bool heroe)
         {
             Nombre = nombre;
             Imagen = imagen;
@@ -51,13 +51,13 @@ namespace Superheroes
 
         
 
-        public static List<superheroe> GetSamples()
+        public static List<Superheroe> GetSamples()
         {
-            List<superheroe> ejemplos = new List<superheroe>();
+            List<Superheroe> ejemplos = new List<Superheroe>();
 
-            superheroe ironman = new superheroe("Ironman", @"https://dossierinteractivo.com/wp-content/uploads/2021/01/Iron-Man.png", true, false, true);
-            superheroe kingpin = new superheroe("Kingpin", @"https://www.comicbasics.com/wp-content/uploads/2017/09/Kingpin.jpg", false, false, false);
-            superheroe spiderman = new superheroe("Spiderman", @"https://wipy.tv/wp-content/uploads/2019/08/destino-de-%E2%80%98Spider-Man%E2%80%99-en-los-Comics.jpg", true, true, true);
+            Superheroe ironman = new Superheroe("Ironman", @"https://dossierinteractivo.com/wp-content/uploads/2021/01/Iron-Man.png", true, false, true);
+            Superheroe kingpin = new Superheroe("Kingpin", @"https://www.comicbasics.com/wp-content/uploads/2017/09/Kingpin.jpg", false, false, false);
+            Superheroe spiderman = new Superheroe("Spiderman", @"https://wipy.tv/wp-content/uploads/2019/08/destino-de-%E2%80%98Spider-Man%E2%80%99-en-los-Comics.jpg", true, true, true);
 
             ejemplos.Add(ironman);
             ejemplos.Add(kingpin);

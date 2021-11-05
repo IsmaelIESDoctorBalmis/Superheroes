@@ -20,7 +20,7 @@ namespace Superheroes
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<superheroe> personajes = superheroe.GetSamples();
+        List<Superheroe> personajes = Superheroe.GetSamples();
         int contadorPersonaje = 0;
 
         public MainWindow()
@@ -36,19 +36,20 @@ namespace Superheroes
             int numeroPersonaje = int.Parse(numberPersonajeTextBlock.Text.ToString());
             Image flecha = (Image)sender;
 
-                if (flecha.Tag.ToString() == "sumar" && contadorPersonaje < 2)
-                {
-                    contadorPersonaje = contadorPersonaje + 1;
-                    numeroPersonaje++;
-                }
-                else if (flecha.Tag.ToString() == "restar" && contadorPersonaje > 0)
-                {
-                    contadorPersonaje = contadorPersonaje - 1;
-                    numeroPersonaje--;
-                }
-                gridPrincipal.DataContext = personajes[contadorPersonaje];
+            if (flecha.Tag.ToString() == "sumar" && contadorPersonaje < 2)
+            {
+                contadorPersonaje = contadorPersonaje + 1;
+                numeroPersonaje++;
+            }
+            else if (flecha.Tag.ToString() == "restar" && contadorPersonaje > 0)
+            {
+                contadorPersonaje = contadorPersonaje - 1;
+                numeroPersonaje--;
+            }
+            gridPrincipal.DataContext = personajes[contadorPersonaje];
             numberPersonajeTextBlock.Text = numeroPersonaje.ToString();
 
+            
 
 
         }
